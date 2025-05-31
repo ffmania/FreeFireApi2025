@@ -8,9 +8,7 @@
   "functions": {
     "api/index.py": {
       "runtime": "python3.9",
-      "src": "app.py",
-      "use": "@vercel/python", 
-      "config": { 
+      "config": {
         "includeFiles": [
           "lib2.py",
           "proto/**",
