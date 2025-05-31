@@ -7,14 +7,7 @@
   ],
   "functions": {
     "api/index.py": {
-      "runtime": "python3.9",
-      "config": {
-        "includeFiles": [
-          "lib2.py",
-          "proto/**",
-          "requirements.txt"
-        ]
-      }
+      "runtime": "python3.9"
     }
   }
 }
