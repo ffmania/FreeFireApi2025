@@ -8,17 +8,17 @@
   "functions": {
     "api/index.py": {
       "runtime": "python3.9",
-      "src": "app.py"
-    }
-  },
-  "build": {
-    "use": "@vercel/python",
-    "config": {
-      "includeFiles": [
-        "lib2.py",
-        "proto/**",
-        "requirements.txt"
-      ]
+      "src": "app.py",
+      "use": "@vercel/python", // <-- 'use' movido para dentro da função 'api/index.py'
+      "config": { // <-- 'config' também fica aqui, específico para essa função
+        "includeFiles": [
+          "lib2.py",
+          "proto/**",
+          "requirements.txt"
+        ]
+      }
     }
   }
+  // O bloco "build" foi removido completamente, pois as propriedades que geravam erro
+  // foram realocadas e não há outras configurações de build globais necessárias no momento.
 }
