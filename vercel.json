@@ -1,0 +1,24 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api"
+    }
+  ],
+  "functions": {
+    "api/index.py": {
+      "runtime": "python3.9"
+    }
+  },
+  "build": {
+    "src": "app.py",
+    "use": "@vercel/python",
+    "config": {
+      "includeFiles": [
+        "lib2.py",
+        "proto/**",
+        "requirements.txt"
+      ]
+    }
+  }
+}
